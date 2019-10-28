@@ -144,6 +144,7 @@
     <ClCompile Include="MacroValues.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Node.cpp" />
+    <ClCompile Include="TileMap.cpp" />
     <ClCompile Include="UIElement.cpp" />
     <ClCompile Include="UnitObject.cpp" />
   </ItemGroup>
@@ -153,6 +154,7 @@
     <ClInclude Include="InputHandler.h" />
     <ClInclude Include="MacroValues.h" />
     <ClInclude Include="Node.h" />
+    <ClInclude Include="TileMap.h" />
     <ClInclude Include="UIElement.h" />
     <ClInclude Include="UnitObject.h" />
   </ItemGroup>

@@ -26,5 +26,6 @@ extern const int LARGE_HEALTH_GREEN;
 
 
 extern int grid[100][100];
+extern int map1[32][40];
 
 void init();

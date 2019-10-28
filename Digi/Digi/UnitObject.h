@@ -11,10 +11,9 @@ public:
 	void onRightClick(int x, int y, sf::Time time);
 	void update(sf::Time time);
 	void move(sf::Time time);
-	void makePath(int x,int y,sf::Time time);
+	
 	void animate();
-	int GetNodePath();
-	void SoldierConstructor(int nodeX, int nodeY);
+	
 protected:
 	int sprite = 1;
 	int animateTime = 0;

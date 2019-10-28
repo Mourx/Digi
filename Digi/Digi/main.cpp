@@ -19,6 +19,7 @@ int main() {
 		sf::Event event;
 		while (window.pollEvent(event))
 		{
+			
 			// "close requested" event: we close the window
 			if (event.type == sf::Event::Closed)
 				window.close();
