@@ -6,7 +6,6 @@
 class Node {
 public:
 	Node();
-	void LoadMap(int index);
 	Node* Adjacent[4]; // Up, Right, Down, Left
 	int travelCost;
 	int totalTravelCost;

@@ -1,15 +1,23 @@
 #include <vector>
 #include <SFML/Graphics.hpp>
 #include "UnitObject.h"
+#include "MacroValues.h"
 
-sf::RenderWindow window(sf::VideoMode(800, 600), "SFML works!");
-GameEngine* Engine = new GameEngine();
+
+
 
 
 int main() {
 
+	init();
+	sf::RenderWindow window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "SFML works!",sf::Style::Resize);
+	window.getSize();
+	GameEngine* Engine = new GameEngine();
+
+
 	sf::Clock clock;
 	UnitObject* Soldier = new UnitObject(1, Engine, 24, 16);
+	
 	Engine->AddUnit(Soldier);
 	while (window.isOpen())
 	{
@@ -19,7 +27,7 @@ int main() {
 		sf::Event event;
 		while (window.pollEvent(event))
 		{
-			
+
 			// "close requested" event: we close the window
 			if (event.type == sf::Event::Closed)
 				window.close();
@@ -27,6 +35,15 @@ int main() {
 		Engine->Update(currentTime);
 		window.clear(sf::Color::Blue);
 		window.draw(Soldier->icon);
+		for (int i = 0; i < Engine->map->Tiles.size(); i++) {
+			
+			for (int j = 0; j < Engine->map->Tiles[i].size(); j++) {
+				window.draw(Engine->map->Tiles[i][j]->icon);
+			
+			
+			}
+
+		}
 		window.display();
 		
 	}
