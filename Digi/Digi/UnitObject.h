@@ -2,6 +2,7 @@
 
 #include "GameObject.h"
 #include "GameEngine.h"
+#include "MacroValues.h"
 
 
 class UnitObject : public GameObject {

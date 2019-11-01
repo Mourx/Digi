@@ -14,7 +14,7 @@ const int MINI_HEALTH_GREEN = 1;
 const int LARGE_HEALTH_RED = 2;
 const int LARGE_HEALTH_GREEN = 3;
 std::map<int, sf::Texture*> textureMap;
-
+std::map<int, sf::Texture*> texturePlayer;
 int grid[100][100] = {};
 void init() {
 	for (int i = 0; i < 100; i++) {
@@ -24,37 +24,44 @@ void init() {
 	}
 
 	sf::Texture* tex = new sf::Texture();
-	tex->loadFromFile("spritesheet.png", sf::IntRect(0, 0, 32, 32));
+	tex->loadFromFile("MapTextures.png", sf::IntRect(32, 32, 32, 32));
 	textureMap[0] = tex;
 	tex = new sf::Texture();
-	tex->loadFromFile("spritesheet.png", sf::IntRect(96, 0, 32, 32));
+	tex->loadFromFile("MapTextures.png", sf::IntRect(0, 0, 32, 32));
+	textureMap[8] = tex;
+	tex = new sf::Texture();
+	tex->loadFromFile("MapTextures.png", sf::IntRect(32, 0, 32, 32));
 	textureMap[1] = tex;
 	tex = new sf::Texture();
-	tex->loadFromFile("spritesheet.png", sf::IntRect(0, 32, 32, 32));
-	textureMap[2] = tex;
+	tex->loadFromFile("MapTextures.png", sf::IntRect(64, 0, 32, 32));
+	textureMap[2] = tex;	
 	tex = new sf::Texture();
-	tex->loadFromFile("spritesheet.png", sf::IntRect(32, 32, 32, 32));
+	tex->loadFromFile("MapTextures.png", sf::IntRect(64, 32, 32, 32));
 	textureMap[3] = tex;	
 	tex = new sf::Texture();
-	tex->loadFromFile("spritesheet.png", sf::IntRect(64, 32, 32, 32));
-	textureMap[4] = tex;	
+	tex->loadFromFile("MapTextures.png", sf::IntRect(64, 64, 32, 32));
+	textureMap[4] = tex;
 	tex = new sf::Texture();
-	tex->loadFromFile("spritesheet.png", sf::IntRect(64, 0, 32, 32));
+	tex->loadFromFile("MapTextures.png", sf::IntRect(32, 64, 32, 32));
 	textureMap[5] = tex;
 	tex = new sf::Texture();
-	tex->loadFromFile("spritesheet.png", sf::IntRect(0, 0, 32, 32));
+	tex->loadFromFile("MapTextures.png", sf::IntRect(0, 64, 32, 32));
 	textureMap[6] = tex;
 	tex = new sf::Texture();
-	tex->loadFromFile("spritesheet.png", sf::IntRect(32, 0, 32, 32));
+	tex->loadFromFile("MapTextures.png", sf::IntRect(0, 32, 32, 32));
 	textureMap[7] = tex;
+
 	tex = new sf::Texture();
-	tex->loadFromFile("spritesheet.png", sf::IntRect(0, 0, 32, 32));
-	textureMap[8] = tex;
+	tex->loadFromFile("spritesheet.png", sf::IntRect(32, 0, 32, 32));
+	texturePlayer[0] = tex;
+	tex = new sf::Texture();
+	tex->loadFromFile("spritesheet.png", sf::IntRect(64, 0, 32, 32));
+	texturePlayer[1] = tex;
 
 }
 
 int map1[32][40] = { 
-{0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2},
+{8,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2},
 {7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3}, 
 {7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3}, 
 {7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3}, 

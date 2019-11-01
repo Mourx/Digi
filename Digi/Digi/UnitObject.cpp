@@ -36,13 +36,11 @@ UnitObject::UnitObject(int UnitTypeID, GameEngine* Engine, int nodeX, int nodeY)
 
 void UnitObject::animate() {
 	if (sprite == 1) {
-		spriteIcon.loadFromFile("spritesheet.png", sf::IntRect(64, 0, 32, 32));
-		icon.setTexture(spriteIcon);
+		icon.setTexture(*texturePlayer[0]);
 		sprite = 2;
 	}
 	else {
-		spriteIcon.loadFromFile("spritesheet.png", sf::IntRect(32, 0, 32, 32));
-		icon.setTexture(spriteIcon);
+		icon.setTexture(*texturePlayer[1]);
 		sprite = 1;
 	}
 	

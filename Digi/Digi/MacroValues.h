@@ -26,6 +26,7 @@ extern const int LARGE_HEALTH_RED;
 extern const int LARGE_HEALTH_GREEN;
 
 extern std::map<int, sf::Texture*> textureMap;
+extern std::map<int, sf::Texture*> texturePlayer;
 
 extern int grid[100][100];
 extern int map1[32][40];

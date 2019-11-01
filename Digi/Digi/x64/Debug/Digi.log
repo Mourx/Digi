@@ -1,5 +1,2 @@
-﻿  main.cpp
-c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(7): warning C4091: 'extern ': ignored on left of 'GameEngine' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(8): warning C4091: 'extern ': ignored on left of 'Player' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(9): warning C4091: 'extern ': ignored on left of 'UIElement' when no variable is declared
+﻿  MacroValues.cpp
   Digi.vcxproj -> C:\Users\Joel\Documents\Digi\Digi\Digi\x64\Debug\Digi.exe

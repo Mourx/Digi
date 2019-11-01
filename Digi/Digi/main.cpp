@@ -10,7 +10,7 @@
 int main() {
 
 	init();
-	sf::RenderWindow window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "SFML works!",sf::Style::Resize);
+	sf::RenderWindow window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "SFML works!");
 	window.getSize();
 	GameEngine* Engine = new GameEngine();
 
@@ -34,7 +34,7 @@ int main() {
 		}
 		Engine->Update(currentTime);
 		window.clear(sf::Color::Blue);
-		window.draw(Soldier->icon);
+		
 		for (int i = 0; i < Engine->map->Tiles.size(); i++) {
 			
 			for (int j = 0; j < Engine->map->Tiles[i].size(); j++) {
@@ -44,6 +44,10 @@ int main() {
 			}
 
 		}
+		for (int i = 0; i < Engine->unitList.size(); i++) {
+			window.draw(Engine->unitList[i]->icon);
+		}
+		
 		window.display();
 		
 	}
