@@ -3,7 +3,8 @@
 
 Player::Player() {};
 
-GameEngine::GameEngine() {
+GameEngine::GameEngine(sf::View window) {
+	camera = window;
 	for (int i = 0; i < GRID_ROWS; i++) {
 		std::vector<Node*> vector;
 		for (int j = 0; j < GRID_COLUMNS; j++) {
@@ -11,12 +12,16 @@ GameEngine::GameEngine() {
 		}
 	
 	}
-
+	camera.zoom(1);
+	camera.setCenter(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2);
+	camera.setSize(600, 600);
 	
-	playerList.push_back(new Player());
-	playerList[0]->selectionRect.setOutlineColor(sf::Color::Yellow);
-	playerList[0]->selectionRect.setFillColor(sf::Color::Transparent);
-	playerList[0]->selectionRect.setOutlineThickness(5);
+	UnitObject* Soldier = new UnitObject(1, this, 24, 16);
+	Soldier->setPosition(92, 92);
+	player->PC = Soldier;
+	input = new InputHandler(this);
+	camera.setCenter(unitList[0]->icon.getPosition());
+
 }
 
 void GameEngine::ConvertToNodes(int grid[100][100], std::vector<std::vector<Node*>> nodes) {

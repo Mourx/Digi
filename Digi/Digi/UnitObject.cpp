@@ -68,14 +68,22 @@ void UnitObject::onRightClick(int x,int y, sf::Time time) {
 }
 
 
-void UnitObject::move(sf::Time time) {
-	
+void UnitObject::move(int direction) {
+	bMoving = true;
+	startTime.Zero;
 }
 
 void UnitObject::update(sf::Time time) {		
-	if (time.asMilliseconds() - animateTime >= 200) {
-		animate();
-		animateTime = time.asMilliseconds();
+	if (bMoving) {
+		if (time.asMilliseconds() - animateTime >= 200) {
+			animate();
+			animateTime = time.asMilliseconds();
+		}
+		if (startTime.asMilliseconds == 0) {
+			startTime = time;
+		}
+		int diff = time.asMilliseconds() - startTime.asMilliseconds();
+		
 	}
 
 }

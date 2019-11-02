@@ -6,13 +6,44 @@ TileMap::TileMap()
 {
 }
 
-TileMap::TileMap(int id)
+TileMap::TileMap(int id, bool activeRoom)
 {
 	LoadMap(id);
+	if (activeRoom) {
+		LoadNeighbours(id);
+	}
 }
 
 TileMap::~TileMap()
 {
+}
+
+void TileMap::LoadNeighbours(int id) {
+	for (int i = 0; i < 9; i++) {
+		TileMap* neighbour = new TileMap(id, false);
+		for (int k = 0; k < 32; k++) {
+
+
+			for (int j = 0; j < 40; j++) {
+				Node* node = neighbour->Tiles[k][j];
+				if (i == 0 || i == 1 || i == 2) {
+					node->y = node->y - 1024;
+				}
+				else if (i == 5 || i == 6 || i == 7) {
+					node->y = node->y + 1024;
+				}
+				if (i == 0 || i == 3 || i == 5) {
+					node->x = node->x - 1280;
+				}
+				else if (i == 2 || i == 4 || i == 7) {
+					node->x = node->x + 1280;
+				}
+
+				node->icon.setPosition(node->x, node->y);
+			}
+		}
+		Neighbours.push_back(neighbour);
+	}
 }
 
 void TileMap::LoadMap(int index) {

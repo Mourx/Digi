@@ -11,7 +11,7 @@ public:
 	int getValue(int whichValue);
 	void onRightClick(int x, int y, sf::Time time);
 	void update(sf::Time time);
-	void move(sf::Time time);
+	void move(int direction);
 	
 	void animate();
 	
@@ -19,6 +19,7 @@ protected:
 	int sprite = 1;
 	int animateTime = 0;
 	int health, armour;
+	sf::Time startTime;
 	bool bMoving = false;
 	int speed;
 	Node* currentNode;
@@ -29,5 +30,4 @@ protected:
 	float remainingDistX = 0;
 	float remainingDistY = 0;
 	int dirX = 0, dirY = 0;
-	int startTime = 0;
 };

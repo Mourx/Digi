@@ -12,13 +12,13 @@ int main() {
 	init();
 	sf::RenderWindow window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "SFML works!");
 	window.getSize();
-	GameEngine* Engine = new GameEngine();
-
+	GameEngine* Engine = new GameEngine(window.getDefaultView());
+	window.setView(Engine->camera);
 
 	sf::Clock clock;
-	UnitObject* Soldier = new UnitObject(1, Engine, 24, 16);
 	
-	Engine->AddUnit(Soldier);
+	
+	
 	while (window.isOpen())
 	{
 		sf::Time currentTime = clock.getElapsedTime();
@@ -43,6 +43,17 @@ int main() {
 			
 			}
 
+		}
+		for (int k = 0; k < Engine->map->Neighbours.size();k++) {
+			for (int i = 0; i < Engine->map->Neighbours[k]->Tiles.size(); i++) {
+
+				for (int j = 0; j < Engine->map->Neighbours[k]->Tiles[i].size(); j++) {
+					window.draw(Engine->map->Neighbours[k]->Tiles[i][j]->icon);
+
+
+				}
+
+			}
 		}
 		for (int i = 0; i < Engine->unitList.size(); i++) {
 			window.draw(Engine->unitList[i]->icon);

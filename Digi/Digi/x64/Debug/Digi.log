@@ -1,2 +1,33 @@
-﻿  MacroValues.cpp
+﻿  GameEngine.cpp
+c:\users\joel\documents\digi\digi\digi\digi\inputhandler.h(5): warning C4091: 'extern ': ignored on left of 'GameEngine' when no variable is declared
+c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(7): warning C4091: 'extern ': ignored on left of 'GameEngine' when no variable is declared
+c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(8): warning C4091: 'extern ': ignored on left of 'Player' when no variable is declared
+c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(9): warning C4091: 'extern ': ignored on left of 'UIElement' when no variable is declared
+c:\users\joel\documents\digi\digi\digi\digi\gameengine.h(12): warning C4091: 'extern ': ignored on left of 'InputHandler' when no variable is declared
+c:\users\joel\documents\digi\digi\digi\digi\gameengine.cpp(16): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\joel\documents\digi\digi\digi\digi\gameengine.cpp(35): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\joel\documents\digi\digi\digi\digi\gameengine.cpp(36): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  InputHandler.cpp
+c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(7): warning C4091: 'extern ': ignored on left of 'GameEngine' when no variable is declared
+c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(8): warning C4091: 'extern ': ignored on left of 'Player' when no variable is declared
+c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(9): warning C4091: 'extern ': ignored on left of 'UIElement' when no variable is declared
+c:\users\joel\documents\digi\digi\digi\digi\gameengine.h(12): warning C4091: 'extern ': ignored on left of 'InputHandler' when no variable is declared
+c:\users\joel\documents\digi\digi\digi\digi\inputhandler.h(5): warning C4091: 'extern ': ignored on left of 'GameEngine' when no variable is declared
+  UnitObject.cpp
+c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(7): warning C4091: 'extern ': ignored on left of 'GameEngine' when no variable is declared
+c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(8): warning C4091: 'extern ': ignored on left of 'Player' when no variable is declared
+c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(9): warning C4091: 'extern ': ignored on left of 'UIElement' when no variable is declared
+c:\users\joel\documents\digi\digi\digi\digi\inputhandler.h(5): warning C4091: 'extern ': ignored on left of 'GameEngine' when no variable is declared
+c:\users\joel\documents\digi\digi\digi\digi\gameengine.h(12): warning C4091: 'extern ': ignored on left of 'InputHandler' when no variable is declared
+c:\users\joel\documents\digi\digi\digi\digi\unitobject.cpp(14): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\joel\documents\digi\digi\digi\digi\unitobject.cpp(19): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\joel\documents\digi\digi\digi\digi\unitobject.cpp(24): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\joel\documents\digi\digi\digi\digi\unitobject.cpp(84): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+  main.cpp
+c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(7): warning C4091: 'extern ': ignored on left of 'GameEngine' when no variable is declared
+c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(8): warning C4091: 'extern ': ignored on left of 'Player' when no variable is declared
+c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(9): warning C4091: 'extern ': ignored on left of 'UIElement' when no variable is declared
+c:\users\joel\documents\digi\digi\digi\digi\inputhandler.h(5): warning C4091: 'extern ': ignored on left of 'GameEngine' when no variable is declared
+c:\users\joel\documents\digi\digi\digi\digi\gameengine.h(12): warning C4091: 'extern ': ignored on left of 'InputHandler' when no variable is declared
+  Generating Code...
   Digi.vcxproj -> C:\Users\Joel\Documents\Digi\Digi\Digi\x64\Debug\Digi.exe
