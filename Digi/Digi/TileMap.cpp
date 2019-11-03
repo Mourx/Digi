@@ -19,6 +19,7 @@ TileMap::~TileMap()
 }
 
 void TileMap::LoadNeighbours(int id) {
+	Neighbours.clear();
 	for (int i = 0; i < 9; i++) {
 		TileMap* neighbour = new TileMap(id, false);
 		for (int k = 0; k < 32; k++) {
@@ -47,6 +48,7 @@ void TileMap::LoadNeighbours(int id) {
 }
 
 void TileMap::LoadMap(int index) {
+	Tiles.clear();
 	std::vector<sf::Texture*> textures;
 	
 	
@@ -64,6 +66,7 @@ void TileMap::LoadMap(int index) {
 			tile->icon.setScale(1, 1);
 			switch (map1[i][j]) {
 			case(0):
+				tile->bPathable = true;
 				tile->icon.setTexture(*textureMap[0]);
 				break;
 			case(1):

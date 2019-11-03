@@ -1,8 +1,6 @@
 #include "GameEngine.h"
 
 
-Player::Player() {};
-
 GameEngine::GameEngine(sf::View window) {
 	camera = window;
 	for (int i = 0; i < GRID_ROWS; i++) {
@@ -17,10 +15,11 @@ GameEngine::GameEngine(sf::View window) {
 	camera.setSize(600, 600);
 	
 	UnitObject* Soldier = new UnitObject(1, this, 24, 16);
-	Soldier->setPosition(92, 92);
+	Soldier->setPosition(576, 32);
+	player = new Player();
 	player->PC = Soldier;
 	input = new InputHandler(this);
-	camera.setCenter(unitList[0]->icon.getPosition());
+	camera.setCenter(player->PC->icon.getPosition());
 
 }
 
@@ -55,5 +54,59 @@ void GameEngine::AddUnit(GameObject* unit) {
 void GameEngine::Update(sf::Time time) {
 	for (int i = 0; i < unitList.size(); i++) {
 		unitList[i]->update(time);
+	}
+	player->PC->update(time);
+	input->checkKeyboard();
+	camera.setCenter(player->PC->icon.getPosition());
+}
+
+void GameEngine::LoadNewRoom(int id) {
+	map->LoadMap(id);
+	map->LoadNeighbours(id);
+}
+
+Node* GameEngine::getAdjacentTile(Node* startNode,int direction) {
+	switch (direction) {
+	case DIRECTION_UP:
+		if ((int)startNode->y <= 0) {
+			
+			Node* temp = map->Neighbours[1]->Tiles[31][(int)startNode->x / 32];
+			temp->bNewRoom = true;
+			return temp;
+		}
+		else {
+			return map->Tiles[-1 + (int)startNode->y / 32][(int)startNode->x / 32];
+		}
+	case DIRECTION_RIGHT:
+		if ((int)startNode->x >= 1248) {
+			
+			Node* temp = map->Neighbours[4]->Tiles[(int)startNode->y/32][0];
+			temp->bNewRoom = true;
+			return temp;
+		}
+		else {
+			return map->Tiles[(int)startNode->y / 32][1+(int)startNode->x / 32];
+
+		}
+	case DIRECTION_DOWN:
+		if ((int)startNode->y >= 992) {
+			
+			Node* temp = map->Neighbours[6]->Tiles[0][(int)startNode->x / 32];
+			temp->bNewRoom = true;
+			return temp;
+		}
+		else {
+			return map->Tiles[1 + (int)startNode->y / 32][(int)startNode->x / 32];
+		}
+	case DIRECTION_LEFT:
+		if ((int)startNode->x == 0) {
+			
+			Node* temp = map->Neighbours[1]->Tiles[(int)startNode->y / 32][39];
+			temp->bNewRoom = true;
+			return temp;
+		}
+		else {
+			return map->Tiles[(int)startNode->y / 32][-1 + (int)startNode->x / 32];
+		}
 	}
 }

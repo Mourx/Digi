@@ -13,16 +13,16 @@ InputHandler::~InputHandler()
 }
 
 void InputHandler::checkKeyboard() {
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-		engine->player->Move(0);
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up) || sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
+		engine->player->Move(DIRECTION_UP);
 	}
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-	
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down) || sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
+		engine->player->Move(DIRECTION_DOWN);
 	}
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
+		engine->player->Move(DIRECTION_LEFT);
 	}
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
+		engine->player->Move(DIRECTION_RIGHT);
 	}
 }

@@ -2,7 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include "UnitObject.h"
 #include "MacroValues.h"
-
+#include "serialization\serialization.hpp"
 
 
 
@@ -13,7 +13,7 @@ int main() {
 	sf::RenderWindow window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "SFML works!");
 	window.getSize();
 	GameEngine* Engine = new GameEngine(window.getDefaultView());
-	window.setView(Engine->camera);
+	
 
 	sf::Clock clock;
 	
@@ -22,7 +22,7 @@ int main() {
 	while (window.isOpen())
 	{
 		sf::Time currentTime = clock.getElapsedTime();
-
+		window.setView(Engine->camera);
 		// check all the window's events that were triggered since the last iteration of the loop
 		sf::Event event;
 		while (window.pollEvent(event))
@@ -55,9 +55,9 @@ int main() {
 
 			}
 		}
-		for (int i = 0; i < Engine->unitList.size(); i++) {
-			window.draw(Engine->unitList[i]->icon);
-		}
+		
+		window.draw(Engine->player->PC->icon);
+	
 		
 		window.display();
 		

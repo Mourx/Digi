@@ -8,9 +8,10 @@
 #include "TileMap.h"
 #include "SFML/Window.hpp"
 #include "UnitObject.h"
+#include "Player.h"
 
 extern class InputHandler;
-
+class Player;
 
 class GameEngine {
 public:
@@ -24,6 +25,8 @@ public:
 	void AssignAdjacent(int Direction, Node* node, Node* next);
 	void AddUnit(GameObject* unit);
 	void Update(sf::Time time);
+	void LoadNewRoom(int id);
+	Node* getAdjacentTile(Node* startNode, int direction);
 	InputHandler* input;
 };
 

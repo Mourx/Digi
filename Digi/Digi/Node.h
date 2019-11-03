@@ -11,6 +11,8 @@ public:
 	int totalTravelCost;
 	float x, y;
 	Node* nextNode;
+	bool bPathable = false;
+	bool bNewRoom = false;
 	sf::Sprite icon;
 	sf::Texture tex;
 };

@@ -2,6 +2,8 @@
 
 #include "UnitObject.h"
 
+extern class UnitObject;
+
 class Player
 {
 public:
