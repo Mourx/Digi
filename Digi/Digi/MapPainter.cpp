@@ -6,7 +6,7 @@
 
 int main() {
 	int mapTemp[32][40];
-	std::copy(&map1[0][0], &map1[0][0] + 32 * 40, mapTemp[0][0]);
+	std::copy(&map1[0][0], &map1[0][0] + 32 * 40, &mapTemp[0][0]);
 	TileMap* tilemap = new TileMap();
 	sf::RenderWindow window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "SFML works!");
 	sf::View camera = window.getDefaultView();
@@ -27,8 +27,9 @@ int main() {
 			if (event.type == sf::Event::Closed)
 				window.close();
 		}
-		window.clear();
-
+		window.clear(sf::Color::Blue);
+		window.display();
+		
 	}
 	return 0;
 }

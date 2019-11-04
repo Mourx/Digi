@@ -1,0 +1,3 @@
+﻿  MapPainter.cpp
+c:\users\joel\documents\digi\digi\digi\digi\mappainter.cpp(14): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  MapPainter.vcxproj -> C:\Users\Joel\Documents\Digi\Digi\Digi\x64\Debug\MapPainter.exe
