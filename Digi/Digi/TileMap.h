@@ -7,6 +7,7 @@ class TileMap
 public:
 	TileMap();
 	TileMap(int id, bool activeRoom);
+	TileMap(int mapArray[32][40]);
 	~TileMap();
 	void LoadMap(int index);
 	void LoadNeighbours(int id);

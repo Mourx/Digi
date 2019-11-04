@@ -1,28 +1,4 @@
-﻿  GameEngine.cpp
-c:\users\joel\documents\digi\digi\digi\digi\inputhandler.h(5): warning C4091: 'extern ': ignored on left of 'GameEngine' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(7): warning C4091: 'extern ': ignored on left of 'GameEngine' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(8): warning C4091: 'extern ': ignored on left of 'Player' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(9): warning C4091: 'extern ': ignored on left of 'UIElement' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\player.h(5): warning C4091: 'extern ': ignored on left of 'UnitObject' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\gameengine.h(13): warning C4091: 'extern ': ignored on left of 'InputHandler' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\gameengine.cpp(14): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\joel\documents\digi\digi\digi\digi\gameengine.cpp(30): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-c:\users\joel\documents\digi\digi\digi\digi\gameengine.cpp(31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-  GameObject.cpp
-c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(7): warning C4091: 'extern ': ignored on left of 'GameEngine' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(8): warning C4091: 'extern ': ignored on left of 'Player' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(9): warning C4091: 'extern ': ignored on left of 'UIElement' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\gameobject.cpp(18): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\joel\documents\digi\digi\digi\digi\gameobject.cpp(50): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-  InputHandler.cpp
-c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(7): warning C4091: 'extern ': ignored on left of 'GameEngine' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(8): warning C4091: 'extern ': ignored on left of 'Player' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(9): warning C4091: 'extern ': ignored on left of 'UIElement' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\player.h(5): warning C4091: 'extern ': ignored on left of 'UnitObject' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\gameengine.h(13): warning C4091: 'extern ': ignored on left of 'InputHandler' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\inputhandler.h(5): warning C4091: 'extern ': ignored on left of 'GameEngine' when no variable is declared
-  MacroValues.cpp
-  main.cpp
+﻿  main.cpp
 c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(7): warning C4091: 'extern ': ignored on left of 'GameEngine' when no variable is declared
 c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(8): warning C4091: 'extern ': ignored on left of 'Player' when no variable is declared
 c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(9): warning C4091: 'extern ': ignored on left of 'UIElement' when no variable is declared
@@ -30,32 +6,27 @@ c:\users\joel\documents\digi\digi\digi\digi\inputhandler.h(5): warning C4091: 'e
 c:\users\joel\documents\digi\digi\digi\digi\player.h(5): warning C4091: 'extern ': ignored on left of 'UnitObject' when no variable is declared
 c:\users\joel\documents\digi\digi\digi\digi\gameengine.h(13): warning C4091: 'extern ': ignored on left of 'InputHandler' when no variable is declared
 c:\users\joel\documents\digi\digi\digi\boost\include\serialization\serialization.hpp(13): fatal error C1083: Cannot open include file: 'boost/config.hpp': No such file or directory
-  Node.cpp
-  Player.cpp
-c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(7): warning C4091: 'extern ': ignored on left of 'GameEngine' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(8): warning C4091: 'extern ': ignored on left of 'Player' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(9): warning C4091: 'extern ': ignored on left of 'UIElement' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\inputhandler.h(5): warning C4091: 'extern ': ignored on left of 'GameEngine' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\gameengine.h(13): warning C4091: 'extern ': ignored on left of 'InputHandler' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\player.h(5): warning C4091: 'extern ': ignored on left of 'UnitObject' when no variable is declared
-  TileMap.cpp
-c:\users\joel\documents\digi\digi\digi\digi\tilemap.cpp(62): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-c:\users\joel\documents\digi\digi\digi\digi\tilemap.cpp(63): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-  UIElement.cpp
-c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(7): warning C4091: 'extern ': ignored on left of 'GameEngine' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(8): warning C4091: 'extern ': ignored on left of 'Player' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(9): warning C4091: 'extern ': ignored on left of 'UIElement' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\uielement.cpp(9): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  UnitObject.cpp
-c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(7): warning C4091: 'extern ': ignored on left of 'GameEngine' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(8): warning C4091: 'extern ': ignored on left of 'Player' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(9): warning C4091: 'extern ': ignored on left of 'UIElement' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\inputhandler.h(5): warning C4091: 'extern ': ignored on left of 'GameEngine' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\player.h(5): warning C4091: 'extern ': ignored on left of 'UnitObject' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\gameengine.h(13): warning C4091: 'extern ': ignored on left of 'InputHandler' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\unitobject.cpp(14): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\joel\documents\digi\digi\digi\digi\unitobject.cpp(19): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\joel\documents\digi\digi\digi\digi\unitobject.cpp(24): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\joel\documents\digi\digi\digi\digi\unitobject.cpp(173): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+  MapPainter.cpp
+c:\users\joel\documents\digi\digi\digi\digi\mappainter.cpp(14): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xutility(2414): error C2100: illegal indirection
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xutility(2434): note: see reference to function template instantiation '_OutIt std::_Copy_unchecked1<_InIt,_OutIt>(_InIt,_InIt,_OutIt,std::_General_ptr_iterator_tag)' being compiled
+          with
+          [
+              _OutIt=int,
+              _InIt=int *
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xutility(2445): note: see reference to function template instantiation '_OutIt std::_Copy_unchecked<_Ty*,_Iter>(_InIt,_InIt,_OutIt)' being compiled
+          with
+          [
+              _OutIt=int,
+              _Ty=int,
+              _Iter=int,
+              _InIt=int *
+          ]
+  c:\users\joel\documents\digi\digi\digi\digi\mappainter.cpp(9): note: see reference to function template instantiation '_OutIt std::copy<int*,int>(_InIt,_InIt,_OutIt)' being compiled
+          with
+          [
+              _OutIt=int,
+              _InIt=int *
+          ]
   Generating Code...
-c:\users\joel\documents\digi\digi\digi\digi\gameengine.cpp(112): warning C4715: 'GameEngine::getAdjacentTile': not all control paths return a value

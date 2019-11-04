@@ -14,6 +14,10 @@ TileMap::TileMap(int id, bool activeRoom)
 	}
 }
 
+TileMap::TileMap(int mapArray[32][40]) {
+
+}
+
 TileMap::~TileMap()
 {
 }
