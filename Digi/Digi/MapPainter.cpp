@@ -2,6 +2,7 @@
 #include <vector>
 #include "MacroValues.h"
 #include "TileMap.h"
+#include <boost/serialization/serialization.hpp>
 
 
 int main() {
