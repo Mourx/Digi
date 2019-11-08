@@ -3,21 +3,23 @@
 #include "UnitObject.h"
 #include "MacroValues.h"
 #include <boost/serialization/serialization.hpp>
-
+#include "Handler.h"
 
 
 
 int main() {
 
 	init();
+	Handler* h = new Handler();
+	h->LoadMap(map1);
 	sf::RenderWindow window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "SFML works!");
 	window.getSize();
 	GameEngine* Engine = new GameEngine(window.getDefaultView());
 	
 
 	sf::Clock clock;
-	
-	
+
+
 	
 	while (window.isOpen())
 	{
