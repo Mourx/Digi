@@ -30,5 +30,6 @@ extern std::map<int, sf::Texture*> texturePlayer;
 
 extern int grid[100][100];
 extern int map1[32][40];
+extern int map2[32][40];
 
 void init();

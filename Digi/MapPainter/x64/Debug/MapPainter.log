@@ -50,6 +50,8 @@ c:\users\joel\documents\digi\digi\digi\digi\gameengine.h(13): warning C4091: 'ex
 c:\users\joel\documents\digi\digi\digi\digi\unitobject.cpp(14): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 c:\users\joel\documents\digi\digi\digi\digi\unitobject.cpp(19): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 c:\users\joel\documents\digi\digi\digi\digi\unitobject.cpp(24): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\joel\documents\digi\digi\digi\digi\unitobject.cpp(129): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
+c:\users\joel\documents\digi\digi\digi\digi\unitobject.cpp(130): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
 c:\users\joel\documents\digi\digi\digi\digi\unitobject.cpp(173): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
   Generating Code...
 c:\users\joel\documents\digi\digi\digi\digi\gameengine.cpp(112): warning C4715: 'GameEngine::getAdjacentTile': not all control paths return a value

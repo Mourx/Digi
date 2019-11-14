@@ -19,6 +19,7 @@ public:
 protected:
 	int sprite = 1;
 	int animateTime = 0;
+	float moveSpeed = 2;
 	int health, armour;
 	sf::Time startTime;
 	bool bMoving = false;

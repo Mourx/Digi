@@ -125,9 +125,9 @@ void UnitObject::update(sf::Time time) {
 		}
 		int diff = time.asMilliseconds() - startTime.asMilliseconds();
 		if (diff % 1 == 0) {
-			icon.setPosition(icon.getPosition().x + 1 * dirX, icon.getPosition().y + 1 * dirY);
-			diffY -= 1 * dirY;
-			diffX -= 1 * dirX;
+			icon.setPosition(icon.getPosition().x + moveSpeed * dirX, icon.getPosition().y + moveSpeed * dirY);
+			diffY -= moveSpeed * dirY;
+			diffX -= moveSpeed * dirX;
 		}
 		if (checkArrived()) {
 			if (bShiftRoom) {
