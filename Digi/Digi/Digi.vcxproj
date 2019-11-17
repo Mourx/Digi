@@ -146,6 +146,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Button.cpp" />
     <ClCompile Include="GameEngine.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Handler.cpp" />
@@ -154,11 +155,13 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="SpriteList.cpp" />
     <ClCompile Include="TileMap.cpp" />
     <ClCompile Include="UIElement.cpp" />
     <ClCompile Include="UnitObject.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Button.h" />
     <ClInclude Include="GameEngine.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Handler.h" />
@@ -166,9 +169,14 @@
     <ClInclude Include="MacroValues.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="SpriteList.h" />
     <ClInclude Include="TileMap.h" />
     <ClInclude Include="UIElement.h" />
     <ClInclude Include="UnitObject.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="MapTextures.png" />
+    <Image Include="spritesheet.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

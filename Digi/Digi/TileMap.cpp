@@ -51,7 +51,7 @@ void TileMap::LoadNeighbours(int id) {
 	}
 }
 
-void TileMap::LoadMap(int index) {
+void TileMap::LoadMap(int index){
 	Tiles.clear();
 	std::vector<sf::Texture*> textures;
 	
@@ -65,43 +65,32 @@ void TileMap::LoadMap(int index) {
 			tile = new Node();
 			tile->x = j*32;
 			tile->y = i*32;
-			tile->icon.setPosition(tile->x,tile->y);
+			
 			sf::Texture tex;
-			tile->icon.setScale(1, 1);
+			
 			switch (map1[i][j]) {
-			case(0):
-				tile->bPathable = true;
-				tile->icon.setTexture(*textureMap[0]);
-				break;
-			case(1):
-				tile->icon.setTexture(*textureMap[1]);
-				break;
-			case(2):
-				tile->icon.setTexture(*textureMap[2]);
-				break;
-			case(3):
-				tile->icon.setTexture(*textureMap[3]);
-				break;
-			case(4):
-				tile->icon.setTexture(*textureMap[4]);
-				break;
-			case(5):
-				tile->icon.setTexture(*textureMap[5]);
-				break;
-			case(6):
-				tile->icon.setTexture(*textureMap[6]);
-				break;
-			case(7):
-				tile->icon.setTexture(*textureMap[7]);
-				break;
-			case(8):
-				tile->icon.setTexture(*textureMap[8]);
-				break;
 			default:
+				tile->icon = (sprites->sprites[(map1[i][j])]);
 				break;
 			}
+			if (map1[i][j]%10==0
+) {
+				tile->bPathable = true;
+			}
+			tile->icon.setPosition(tile->x, tile->y);
+			tile->icon.setScale(1, 1);
 			row.push_back(tile);
 		}
 		Tiles.push_back(row);
 	}
+}
+
+void TileMap::SetNode(int x, int y) {
+	//y = sprites->sprites.size() / 2 * 48 - y * 48;
+	y = y / 32;
+	x = x / 32;
+	map1[y][x] = spriteIndex;
+	Tiles[y][x]->icon = selectedSprite;
+	Tiles[y][x]->icon.setPosition(Tiles[y][x]->x, Tiles[y][x]->y);
+	Tiles[y][x]->icon.setScale(1, 1);
 }

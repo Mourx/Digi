@@ -46,7 +46,6 @@ void GameEngine::AssignAdjacent(int Direction, Node* node, Node* next) {
 	}
 }
 
-
 void GameEngine::AddUnit(GameObject* unit) {
 	unitList.push_back(unit);
 }
@@ -109,4 +108,15 @@ Node* GameEngine::getAdjacentTile(Node* startNode,int direction) {
 			return map->Tiles[(int)startNode->y / 32][-1 + (int)startNode->x / 32];
 		}
 	}
+}
+
+void GameEngine::SetNode(int x, int y) {
+	map->SetNode(x, y);
+}
+
+void GameEngine::SelectSprite(int x, int y) {
+	int Nx = (x - 1285)/48;
+	int Ny = (y /48) *2;
+	spriteIndex = Ny + Nx;
+	selectedSprite = sprites->sprites[spriteIndex];
 }

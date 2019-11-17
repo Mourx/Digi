@@ -70,16 +70,16 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LibraryPath>..\SFML-2.5.0\lib;..\Boost\libs;$(LibraryPath)</LibraryPath>
+    <LibraryPath>..\Boost\stage\lib;..\SFML-2.5.0\lib;..\Boost\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LibraryPath>..\SFML-2.5.0\lib;..\Boost\libs;$(LibraryPath)</LibraryPath>
+    <LibraryPath>..\Boost\stage\lib;..\SFML-2.5.0\lib;..\Boost\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LibraryPath>..\SFML-2.5.0\lib;..\Boost\libs;$(LibraryPath)</LibraryPath>
+    <LibraryPath>..\Boost\stage\lib;..\SFML-2.5.0\lib;..\Boost\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LibraryPath>..\SFML-2.5.0\lib;..\Boost\libs;$(LibraryPath)</LibraryPath>
+    <LibraryPath>..\Boost\stage\lib;..\SFML-2.5.0\lib;..\Boost\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -87,7 +87,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\SFML-2.5.0\include;..\Boost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\SFML-2.5.0\include;..\Boost;..\Boost\stage\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>
       </DisableSpecificWarnings>
       <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -102,7 +102,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\SFML-2.5.0\include;..\Boost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\SFML-2.5.0\include;..\Boost;..\Boost\stage\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>
       </DisableSpecificWarnings>
       <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -119,7 +119,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\SFML-2.5.0\include;..\Boost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\SFML-2.5.0\include;..\Boost;..\Boost\stage\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>
       </DisableSpecificWarnings>
       <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -138,7 +138,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\SFML-2.5.0\include;..\Boost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\SFML-2.5.0\include;..\Boost;..\Boost\stage\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>
       </DisableSpecificWarnings>
       <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -150,28 +150,36 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\Digi\Button.cpp" />
     <ClCompile Include="..\Digi\GameEngine.cpp" />
     <ClCompile Include="..\Digi\GameObject.cpp" />
+    <ClCompile Include="..\Digi\Handler.cpp" />
     <ClCompile Include="..\Digi\InputHandler.cpp" />
     <ClCompile Include="..\Digi\MacroValues.cpp" />
     <ClCompile Include="..\Digi\MapPainter.cpp" />
     <ClCompile Include="..\Digi\Node.cpp" />
     <ClCompile Include="..\Digi\Player.cpp" />
+    <ClCompile Include="..\Digi\SpriteList.cpp" />
     <ClCompile Include="..\Digi\TileMap.cpp" />
     <ClCompile Include="..\Digi\UIElement.cpp" />
     <ClCompile Include="..\Digi\UnitObject.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\Digi\MapTextures.png" />
     <Image Include="..\Digi\spritesheet.png" />
+    <Image Include="load.png" />
+    <Image Include="MapTextures.png" />
+    <Image Include="save.png" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Digi\Button.h" />
     <ClInclude Include="..\Digi\GameEngine.h" />
     <ClInclude Include="..\Digi\GameObject.h" />
+    <ClInclude Include="..\Digi\Handler.h" />
     <ClInclude Include="..\Digi\InputHandler.h" />
     <ClInclude Include="..\Digi\MacroValues.h" />
     <ClInclude Include="..\Digi\Node.h" />
     <ClInclude Include="..\Digi\Player.h" />
+    <ClInclude Include="..\Digi\SpriteList.h" />
     <ClInclude Include="..\Digi\TileMap.h" />
     <ClInclude Include="..\Digi\UIElement.h" />
     <ClInclude Include="..\Digi\UnitObject.h" />

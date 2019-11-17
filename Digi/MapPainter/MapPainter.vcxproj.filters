@@ -45,12 +45,27 @@
     <ClCompile Include="..\Digi\GameObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\Digi\Handler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Digi\SpriteList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Digi\Button.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\Digi\MapTextures.png">
+    <Image Include="..\Digi\spritesheet.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="..\Digi\spritesheet.png">
+    <Image Include="MapTextures.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="load.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="save.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
@@ -80,6 +95,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\Digi\UnitObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Digi\Handler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Digi\SpriteList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Digi\Button.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

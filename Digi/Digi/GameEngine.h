@@ -9,6 +9,7 @@
 #include "SFML/Window.hpp"
 #include "UnitObject.h"
 #include "Player.h"
+#include "Button.h"
 
 extern class InputHandler;
 class Player;
@@ -28,5 +29,9 @@ public:
 	void LoadNewRoom(int id);
 	Node* getAdjacentTile(Node* startNode, int direction);
 	InputHandler* input;
+	void SetNode(int x, int y);
+	void SelectSprite(int x, int y);
+	Button* loadButton;
+	Button* saveButton;
 };
 

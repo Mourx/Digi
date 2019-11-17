@@ -10,6 +10,7 @@ public:
 	InputHandler(GameEngine* engine);
 	~InputHandler();
 	void checkKeyboard();
+	void checkMouse(sf::Vector2f pos);
 	GameEngine* engine;
 };
 
