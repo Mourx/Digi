@@ -32,7 +32,7 @@ void InputHandler::checkKeyboard() {
 void InputHandler::checkMouse(sf::Vector2f pos) {
 	if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
 		printf("%d %d\n", sf::Mouse::getPosition().x, sf::Mouse::getPosition().y);
-		if (pos.y >= 960) {
+		if (pos.y >= 960 && pos.x > 1285 && pos.x < 1349) {
 			if (pos.y >= 992) {
 				engine->saveButton->OnClick();
 			}

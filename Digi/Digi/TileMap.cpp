@@ -68,13 +68,12 @@ void TileMap::LoadMap(int index){
 			
 			sf::Texture tex;
 			
-			switch (map1[i][j]) {
+			switch (mapList[index][i][j]) {
 			default:
-				tile->icon = (sprites->sprites[(map1[i][j])]);
+				tile->icon = (sprites->sprites[(mapList[index][i][j])]);
 				break;
 			}
-			if (map1[i][j]%10==0
-) {
+			if (mapList[index][i][j]%10==0) {
 				tile->bPathable = true;
 			}
 			tile->icon.setPosition(tile->x, tile->y);
@@ -89,7 +88,7 @@ void TileMap::SetNode(int x, int y) {
 	//y = sprites->sprites.size() / 2 * 48 - y * 48;
 	y = y / 32;
 	x = x / 32;
-	map1[y][x] = spriteIndex;
+	mapList[currentMap][y][x] = spriteIndex;
 	Tiles[y][x]->icon = selectedSprite;
 	Tiles[y][x]->icon.setPosition(Tiles[y][x]->x, Tiles[y][x]->y);
 	Tiles[y][x]->icon.setScale(1, 1);

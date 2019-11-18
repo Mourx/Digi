@@ -2,6 +2,9 @@
 #include <map>
 #include "SFML/Graphics.hpp"
 #include "SpriteList.h"
+#include <boost/archive/text_oarchive.hpp>
+#include <boost/archive/text_iarchive.hpp>
+#include <fstream>
 
 #define VALUE_HEALTH 0
 #define VALUE_SPEED 1
@@ -32,6 +35,9 @@ extern std::map<int, sf::Texture*> texturePlayer;
 extern int grid[100][100];
 extern int map1[32][40];
 extern int map2[32][40];
+extern int mapsAmount;
+extern int currentMap;
+extern std::map<int, int[32][40]> mapList;
 extern SpriteList* sprites;
 extern sf::Sprite selectedSprite;
 extern int spriteIndex;

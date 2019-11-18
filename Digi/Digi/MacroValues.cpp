@@ -18,7 +18,9 @@ std::map<int, sf::Texture*> texturePlayer;
 SpriteList* sprites = new SpriteList();
 int spriteIndex = 0;
 sf::Sprite selectedSprite = sprites->sprites[spriteIndex];
-
+std::map<int, int[32][40]> mapList;
+int mapsAmount = 0;
+int currentMap = 0;
 int grid[100][100] = {};
 void init() {
 	for (int i = 0; i < 100; i++) {
@@ -27,6 +29,9 @@ void init() {
 		}
 	}
 
+	
+	std::ifstream ifs("mapAmount.txt", std::ios::binary);
+	ifs >> mapsAmount;
 	
 	sf::Texture* tex = new sf::Texture();
 	tex->loadFromFile("spritesheet.png", sf::IntRect(32, 0, 32, 32));

@@ -11,6 +11,7 @@ GameEngine* engine;
 void SetupButtons(GameEngine* engine);
 int mapTemp[32][40];
 int main() {
+	init();
 	WINDOW_WIDTH += 100;
 	std::copy(&map1[0][0], &map1[0][0] + 32 * 40, &mapTemp[0][0]);
 	TileMap* tilemap = new TileMap();
@@ -62,15 +63,15 @@ int main() {
 
 void SaveMap() {
 	Handler* h = new Handler();
-	h->serializeMap(map1);
+	h->serializeMap();
 	printf("saved");
 }
 
 void LoadMap() {
 	Handler* h = new Handler();
-	h->LoadMap(map1);
+	h->LoadMap();
 	printf("loaded");
-	engine->map->LoadMap(1);
+	engine->map->LoadMap(currentMap);
 
 }
 

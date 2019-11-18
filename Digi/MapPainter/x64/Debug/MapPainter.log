@@ -1,11 +1,3 @@
-﻿  MapPainter.cpp
-c:\users\joel\documents\digi\digi\digi\digi\tilemap.h(6): warning C4091: 'extern ': ignored on left of 'SpriteList' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\inputhandler.h(5): warning C4091: 'extern ': ignored on left of 'GameEngine' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(7): warning C4091: 'extern ': ignored on left of 'GameEngine' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(8): warning C4091: 'extern ': ignored on left of 'Player' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\gameobject.h(9): warning C4091: 'extern ': ignored on left of 'UIElement' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\player.h(5): warning C4091: 'extern ': ignored on left of 'UnitObject' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\gameengine.h(14): warning C4091: 'extern ': ignored on left of 'InputHandler' when no variable is declared
-c:\users\joel\documents\digi\digi\digi\digi\mappainter.cpp(22): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\joel\documents\digi\digi\digi\digi\mappainter.cpp(23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+﻿  MacroValues.cpp
+     Creating library C:\Users\Joel\Documents\Digi\Digi\Digi\x64\Debug\MapPainter.lib and object C:\Users\Joel\Documents\Digi\Digi\Digi\x64\Debug\MapPainter.exp
   MapPainter.vcxproj -> C:\Users\Joel\Documents\Digi\Digi\Digi\x64\Debug\MapPainter.exe
