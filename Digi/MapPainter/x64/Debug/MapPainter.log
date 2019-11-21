@@ -1,3 +1,3 @@
-﻿  MacroValues.cpp
-     Creating library C:\Users\Joel\Documents\Digi\Digi\Digi\x64\Debug\MapPainter.lib and object C:\Users\Joel\Documents\Digi\Digi\Digi\x64\Debug\MapPainter.exp
+﻿  SpriteList.cpp
+c:\users\joel\documents\digi\digi\digi\digi\spritelist.cpp(16): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   MapPainter.vcxproj -> C:\Users\Joel\Documents\Digi\Digi\Digi\x64\Debug\MapPainter.exe

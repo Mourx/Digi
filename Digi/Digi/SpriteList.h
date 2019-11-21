@@ -9,5 +9,7 @@ public:
 
 	std::map<int, sf::Texture*> textures;
 	std::vector<sf::Sprite> sprites;
+	void UpdateOffset(float os);
+	float offset = 0;
 };
 

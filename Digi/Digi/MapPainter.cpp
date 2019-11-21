@@ -27,19 +27,24 @@ int main() {
 	while (window.isOpen()) {
 		window.setView(camera);
 		sf::Event event;
+		sf::Vector2i pixelPos = sf::Mouse::getPosition(window);
+		// convert it to world coordinates
+		sf::Vector2f worldPos = window.mapPixelToCoords(pixelPos);
 		while (window.pollEvent(event))
 		{
 			if (event.type == sf::Event::MouseButtonPressed) {
 
+			}
+			if (event.type == sf::Event::MouseWheelScrolled) {
+				engine->input->scrollMouse(worldPos, (float)event.mouseWheelScroll.delta);
+				std::cout << event.mouseWheelScroll.delta << ", " << sprites->offset << std::endl;
 			}
 			// "close requested" event: we close the window
 			if (event.type == sf::Event::Closed)
 				window.close();
 		}
 		// get the current mouse position in the window
-		sf::Vector2i pixelPos = sf::Mouse::getPosition(window);
-		// convert it to world coordinates
-		sf::Vector2f worldPos = window.mapPixelToCoords(pixelPos);
+		
 
 		input->checkMouse(worldPos);
 		window.clear(sf::Color::Blue);

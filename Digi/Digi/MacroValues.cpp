@@ -21,13 +21,9 @@ sf::Sprite selectedSprite = sprites->sprites[spriteIndex];
 std::map<int, int[32][40]> mapList;
 int mapsAmount = 0;
 int currentMap = 0;
-int grid[100][100] = {};
+
 void init() {
-	for (int i = 0; i < 100; i++) {
-		for (int j = 0; j < 100; j++) {
-			grid[i][j] = 1;
-		}
-	}
+	
 
 	
 	std::ifstream ifs("mapAmount.txt", std::ios::binary);

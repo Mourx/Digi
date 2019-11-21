@@ -50,3 +50,11 @@ void InputHandler::checkMouse(sf::Vector2f pos) {
 
 
 }
+
+void InputHandler::scrollMouse(sf::Vector2f pos,float delta) {
+	if (pos.x > 1285) {
+		//scroll time!
+		//offset y += delta?
+		sprites->UpdateOffset(sprites->offset + 5*delta);
+	}
+}

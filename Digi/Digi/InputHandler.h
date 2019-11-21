@@ -11,6 +11,7 @@ public:
 	~InputHandler();
 	void checkKeyboard();
 	void checkMouse(sf::Vector2f pos);
+	void scrollMouse(sf::Vector2f pos,float delta);
 	GameEngine* engine;
 };
 

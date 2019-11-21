@@ -13,7 +13,7 @@ SpriteList::SpriteList()
 			textures[0] = (tex);
 			sprite.setTexture(*tex);
 			sprite.setScale(1.5,1.5);
-			sprite.setPosition(1285 + 48 * (j % 2), 0 + (sprites.size() / 2) * 48);
+			sprite.setPosition(1285 + 48 * (j % 2), offset + (sprites.size() / 2) * 48);
 			sprites.push_back(sprite);
 			
 		}
@@ -25,4 +25,21 @@ SpriteList::SpriteList()
 SpriteList::~SpriteList()
 {
 
+}
+
+void SpriteList::UpdateOffset(float os) {
+	for (int i = 0; i < sprites.size(); i++) {
+		sprites[i].setPosition(sprites[i].getPosition().x, sprites[i].getPosition().y - offset);
+
+	}
+	offset = os;
+	if (offset >= 0) {
+		offset = 0;
+	}
+	else if (offset <= -sprites[sprites.size() - 1].getPosition().y + 900) {
+		offset = -sprites[sprites.size() - 1].getPosition().y + 900;
+	}
+	for (int i = 0; i < sprites.size(); i++) {
+		sprites[i].setPosition(sprites[i].getPosition().x, sprites[i].getPosition().y + offset);
+	}
 }
