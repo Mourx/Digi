@@ -1,2 +1,2 @@
 # Digi
-DIGI YEET
+DIGI
